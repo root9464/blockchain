@@ -17,7 +17,7 @@
     position: relative
     align-items: center
     justify-content: space-between
-    padding: 10px 10px
+    padding: 20px 20px
 
     >thead
       background-color: #4b4b4b
@@ -36,7 +36,6 @@
         >th
           width: 100%
           text-align: center
-          border-bottom: 1px solid #ff0000
 
     >tbody
       text-align: center
@@ -54,30 +53,34 @@
         justify-content: space-between
 
       .table
-        padding: 20px 50px
+        text-align: center
+        padding: 20px 0px
         width: 100%
         align-items: center
         display: flex
         flex-direction: row
         justify-content: space-between
-        align-items: center
         border-bottom: 1px solid #777777
         gap: 40px
-        > tr
-          background-color: #fff
-          > td
-            width: 250px
+        > tr > td
+          width: 250px
         .containertr
           display: flex
-          align-items: center
+          justify-content: space-between
           > tr
-            background-color: red
-            width: 590px
+            // background-color: red
+            width: 300px
             display: flex
             flex-direction: column
             gap: 15px
+            align-content: center
+            align-items: center
+            justify-content: center
             &:nth-child(2n)
-              background-color: #003cff
-              width: 350px
+              align-content: center
+              align-items: center
+              justify-content: center
+              // background-color: blue
+              width: 300px
             >td
               text-align: center
