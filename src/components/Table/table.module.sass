@@ -2,17 +2,17 @@
   display: table
   text-align: left
   overflow: hidden
-  width: 1030px
+  width: fit-content
   height: max-content
   margin: 0 auto
   border-collapse: collapse
   box-sizing: border-box
   table-layout: auto
-  >div
+
+  >table
     background-color: #414141
     display: flex
     border-radius: 15px
-
     flex-direction: column
     position: relative
     align-items: center
@@ -27,7 +27,6 @@
       border-bottom: 1px solid #777777
       color: white
       >tr
-
         margin: 0
         display: flex
         align-self: center
@@ -37,6 +36,7 @@
         >th
           width: 100%
           text-align: center
+          border-bottom: 1px solid #ff0000
 
     >tbody
       text-align: center
@@ -50,6 +50,9 @@
         align-self: center
         align-items: center
         gap: 100px
+        width: 100%
+        justify-content: space-between
+
       .table
         padding: 20px 50px
         width: 100%
@@ -57,13 +60,24 @@
         display: flex
         flex-direction: row
         justify-content: space-between
+        align-items: center
         border-bottom: 1px solid #777777
+        gap: 40px
         > tr
-          display: grid
-          grid-template-row: repeat(3, 1fr)
-          justify-content: space-around
-          gap: 15px
-          >td
-
-            width: 100%
-            text-align: center
+          background-color: #fff
+          > td
+            width: 250px
+        .containertr
+          display: flex
+          align-items: center
+          > tr
+            background-color: red
+            width: 590px
+            display: flex
+            flex-direction: column
+            gap: 15px
+            &:nth-child(2n)
+              background-color: #003cff
+              width: 350px
+            >td
+              text-align: center

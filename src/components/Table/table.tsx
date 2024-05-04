@@ -1,17 +1,57 @@
-import axios from 'axios';
+
 import style from './table.module.sass';
+type PlatformData = {
+  name: string;
+  money: {
+    first: string;
+    second: string;
+  };
+  amount: {
+    first: string;
+    second: string;
+  };
+};
 
 export const Table = () => {
-	// Const {data} = useQuery({
-	// 	queryKey: ['data'],
-	// 	queryFn: () => axios.get('https://jsonplaceholder.typicode.com/comments'),
-	// });
-	const data = axios.get('https://jsonplaceholder.typicode.com/comments');
-	console.log(data);
+	const json: PlatformData[] = [
+		{
+			name: 'pancakeswapv2',
+			money: {
+				first: 'bnb',
+				second: 'bsc-usdt',
+			},
+			amount: {
+				first: '0.04878654234',
+				second: '0.04878654234',
+			},
+		},
+		{
+			name: 'pancakeswapv2',
+			money: {
+				first: 'bnb',
+				second: 'bsc-usdt',
+			},
+			amount: {
+				first: '0.04878654234',
+				second: '0.04878654234',
+			},
+		},
+		{
+			name: 'pancakeswapv2',
+			money: {
+				first: 'bnb',
+				second: 'bsc-usdt',
+			},
+			amount: {
+				first: '0.04878654234',
+				second: '0.04878654234',
+			},
+		},
+	];
 
 	return (
-		<table className={style.table}>
-			<div>
+		<div className={style.table}>
+			<table>
 				<thead>
 					<tr>
 						<th><h1>Платформа</h1></th>
@@ -21,35 +61,34 @@ export const Table = () => {
 				</thead>
 
 				<tbody>
-					<div className={style.table}>
-						<tr>
-							<td><p>pancakeswapv2</p></td>
-						</tr>
-						<tr>
-							<td><p>bnb</p></td>
-							<td><p>bsc-usdt</p></td>
-						</tr>
-						<tr>
-							<td><p>0.04878654234</p></td>
-							<td><p>0.04878654234</p></td>
-						</tr>
-					</div>
-					<div className={style.table}>
-						<tr>
-							<td><p>pancakeswapv2</p></td>
-						</tr>
-						<tr>
-							<td><p>bnb</p></td>
-							<td><p>bsc-usdt</p></td>
-						</tr>
-						<tr>
-							<td><p>0.04878654234</p></td>
-							<td><p>0.04878654234</p></td>
-						</tr>
-					</div>
+					{
+						json.map((item: PlatformData) => (
+							<div className={style.table}>
+
+								<tr>
+									<td>
+										<p>{item.name}</p>
+									</td>
+								</tr>
+
+								<tr className={style.containertr}>
+									<tr>
+										<td><p>{item.money.first}</p></td>
+										<td><p>{item.money.second}</p></td>
+									</tr>
+
+									<tr>
+										<td><p>{item.amount.first}</p></td>
+										<td><p>{item.amount.second}</p></td>
+									</tr>
+								</tr>
+
+							</div>
+						))
+					}
 				</tbody>
 
-			</div>
-		</table>
+			</table>
+		</div>
 	);
 };
