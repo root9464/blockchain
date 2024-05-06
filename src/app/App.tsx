@@ -1,4 +1,6 @@
-import {PlatformData, Table} from '../components/Table/table';
+
+import {SelectComponent} from '../components/Select/Select';
+import {PlatformData} from '../components/Table/table';
 import './global.sass';
 function App() {
 	const json: PlatformData[] = [
@@ -36,9 +38,10 @@ function App() {
 			},
 		},
 	];
+
 	return (
 		<>
-			<Table {...{json}} />
+			<SelectComponent/>
 		</>
 	);
 }
