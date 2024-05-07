@@ -1,12 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
 
 import {useCallback, useState} from 'react';
 import style from './select.module.sass';
-
-type SelectComponentProps = {
-  setJson: (json: { adress: string; platform: string }) => void;
-};
+import {SelectComponentProps} from './types/types';
 
 export const SelectComponent = ({setJson}: SelectComponentProps) => {
 	const [addressIndex, setAddressIndex] = useState<string>('');

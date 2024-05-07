@@ -9,7 +9,6 @@ export const App = () => {
 	return (
 		<>
 			<StatusTable items={data} />
-
 		</>
 	);
 };
