@@ -12,7 +12,7 @@ import GrayDash from '../../../assets/img/GDash.svg';
 import GreenDash from '../../../assets/img/GrDash.svg';
 import RedDash from '../../../assets/img/RDash.svg';
 import YellowDash from '../../../assets/img/YDash.svg';
-import {StatusEnum} from '../statusTable';
+import {StatusEnum} from '../types/types';
 
 export const getStatusText = ({status, value}: { status: StatusEnum, value: boolean | 'none' | number }) => {
 	const images = {
