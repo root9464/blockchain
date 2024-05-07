@@ -1,4 +1,46 @@
-.select
-  height: 40px
-  width: 200px
-  background-color: #e7e7e7
+.container
+  display: flex
+  flex-direction: column
+  width: 600px
+  height: 276px
+  font-size: 20px
+  gap: 15px
+  align-items: center
+  justify-content: center
+  background-color: #414141
+  padding: 20px 20px
+  border-radius: 15px
+  color: #e7e7e7
+  > h2
+    font-size: 24px
+  .select
+    height: 50px
+    width: 100%
+    background-color: #e7e7e7
+    border-radius: 3px
+    color: black
+    border: 1px solid #c5c5c5
+    &:focus
+      outline: none
+
+  .adress
+    all: unset
+    margin: 0
+    height: 50px
+    width: calc( 100% - 22px )
+    font-size: 14px
+    padding: 0px 10px
+    border-radius: 3px
+    border: 1px solid #c5c5c5
+    background-color: #e7e7e7
+    color: black
+
+  .button
+    all: unset
+    margin: 0
+    padding: 0px 10px
+    height: 51px
+    width: calc( 100% - 22px )
+    border-radius: 3px
+    background-color: #a1fa3b
+    color: black

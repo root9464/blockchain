@@ -1,0 +1,39 @@
+.container
+  display: grid
+  background-color: red
+  width: 500px
+  height: 546px
+  grid-template-rows: repeat(auto-fit, 72px)
+  align-content: space-between
+
+  .ctp
+    background-color: blue
+    width: calc( 100% - 40px )
+    height: 72px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 10px 20px
+
+    &:first-child
+      border-radius: 15px 15px 0px 0px
+      background-color: #fff
+    &:last-child
+      border-radius: 0px 0px 15px 15px
+      background-color: #fff
+    .info
+      display: flex
+      justify-content: center
+      flex-direction: column
+      height: 90%
+      width: 90%
+      >h2
+        font-size: 20px
+        margin: 0
+        padding: 0
+
+      > p
+        font-size: 14px
+        margin: 0
+        padding: 0
