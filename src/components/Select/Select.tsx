@@ -1,3 +1,4 @@
+
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import {useCallback, useState} from 'react';
@@ -37,6 +38,7 @@ export const SelectComponent = ({setJson}: SelectComponentProps) => {
 			</select>
 
 			<button onClick={handleJsonUpdate} className={style.button}>Проанализировать контракт</button>
+
 		</div>
 	);
 };
