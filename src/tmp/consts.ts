@@ -1,3 +1,5 @@
+import {generateRandomIsRenounced} from '../app/func/functions';
+import {IsRenounced} from '../components/StatusTable/types/types';
 import {PlatformData} from '../components/Table/Table';
 
 export const jsondata: PlatformData[] = [
@@ -35,6 +37,8 @@ export const jsondata: PlatformData[] = [
 		},
 	},
 ];
+
+export const data: IsRenounced[] = Array.from({length: 8}, generateRandomIsRenounced);
 
 /*
 	Const [json, setJson] = useState<{adress: string; platform: string}>({
