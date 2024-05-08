@@ -1,13 +1,13 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-mixed-operators */
 import {useEffect, useState} from 'react';
 import style from './progressBar.module.sass';
-export const ProgressBar = () => {
-	const ANIMATION_SPEED = 40; // Ms
+export const ProgressBar = ({targetValue}: {targetValue: number}) => {
+	const ANIMATION_SPEED = 20; // Ms
 	const STROKE_WIDTH = '15px';
 	const ROTATION_DEGREES = -90;
 	const [percentage, setPercentage] = useState(0);
 	const maxValue = 100;
-	const targetValue = 80;
 	const radius = 85;
 	const circleWidth = 200;
 	const dashArray = radius * Math.PI * 2;

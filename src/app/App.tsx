@@ -2,6 +2,6 @@ import {ProgressBar} from '../components/Progress/progressBar';
 
 export const App = () => (
 	<>
-		<ProgressBar />
+		<ProgressBar targetValue={60} />
 	</>
 );
