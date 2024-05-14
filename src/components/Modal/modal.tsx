@@ -10,6 +10,8 @@ export const Modal = () => {
 		adress: '',
 		platform: '',
 	});
+	console.log(json);
+
 	const {open, handleClick} = useContext(ModalContext);
 	return (
 		<div className={style.container}>
