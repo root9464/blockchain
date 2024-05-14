@@ -17,9 +17,9 @@ export const Table = ({json}: {json: PlatformData[]}) => (
 		<table>
 			<thead>
 				<tr>
-					<th><h1>Платформа</h1></th>
-					<th><h1>Основная монета</h1></th>
-					<th><h1>Колличество</h1></th>
+					<th><h2>Платформа</h2></th>
+					<th><h2>Основная монета</h2></th>
+					<th><h2>Колличество</h2></th>
 				</tr>
 			</thead>
 

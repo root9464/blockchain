@@ -16,20 +16,8 @@ export const SelectComponent = ({setJson}: SelectComponentProps) => {
 	return (
 		<div className={style.container}>
 			<h2>Введите адрес смарт-контракта</h2>
-			<input
-				type='text'
-				placeholder='адрес смарт контракта'
-				className={style.adress}
-				value={addressIndex}
-				onChange={e => setAddressIndex(e.target.value)}
-			/>
-			<select
-				name=''
-				id=''
-				className={style.select}
-				value={platformIndex}
-				onChange={e => setPlatformIndex(e.target.value)}
-			>
+			<input type='text' placeholder='адрес смарт контракта' className={style.adress} value={addressIndex} onChange={e => setAddressIndex(e.target.value)}/>
+			<select name='' id='' className={style.select} value={platformIndex} onChange={e => setPlatformIndex(e.target.value)}>
 				<option value='1'>1</option>
 				<option value='2'>2</option>
 				<option value='3'>3</option>

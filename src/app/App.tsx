@@ -3,7 +3,7 @@ import {Modal, Provider} from '../components/Modal/modal';
 import {ProgressBar} from '../components/Progress/progressBar';
 import {StatusTable} from '../components/StatusTable/statusTable';
 import {Table} from '../components/Table/Table';
-import {data, jsondata} from '../tmp/consts';
+import {data, jsondata} from '../consts/consts';
 import style from './app.module.sass';
 import './global.sass';
 export const App = () => (
