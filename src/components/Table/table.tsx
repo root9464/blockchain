@@ -26,7 +26,7 @@ export const Table = ({json}: {json: PlatformData[]}) => (
 			<tbody>
 				{
 					json.map((item: PlatformData) => (
-						<div className={style.table}>
+						<div className={style.table} key={item.name}>
 
 							<tr>
 								<td>
