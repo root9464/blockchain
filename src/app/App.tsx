@@ -9,24 +9,24 @@ import './global.sass';
 export const App = () => (
 	<div className={style.main}>
 		<div className={style.containers}>
-			<div className={style.sideContainer}>
-				<h2>Название таблицы</h2>
-
-				<StatusTable items={data}/>
-			</div>
-
 			<div className={style.mainContainer}>
 
-				<div className={style.buttons}>
-					<Provider>
-						<Modal />
-					</Provider>
-					<button className={style.button}>Анализ передачи токенов</button>
-				</div>
+				<div className={style.tablesContainer}>
+					<div className={style.sideContainer}>
+						<h2>Название таблицы</h2>
+						<StatusTable items={data}/>
+					</div>
 
-				<div className={style.table}>
-					<h2>Аналитика ликвидности</h2>
-					<Table json={jsondata}/>
+					<div className={style.table}>
+						<div className={style.buttons}>
+							<Provider>
+								<Modal />
+							</Provider>
+							<button className={style.button}>Анализ передачи токенов</button>
+						</div>
+						<h2>Аналитика ликвидности</h2>
+						<Table json={jsondata}/>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -61,7 +61,7 @@ export const ProgressBar = ({targetValue}: {targetValue: number}) => {
 						circleWidth / 2
 					})`}
 				/>
-				<text x='50%' y='50%' dy='0.3em' textAnchor='middle' fill='#ffffff'>
+				<text x='50%' y='50%' dy='0.3em' textAnchor='middle' fill='#858585'>
 					{percentage}%
 				</text>
 			</svg>
