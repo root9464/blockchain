@@ -3,8 +3,10 @@
   width: 100%
   display: flex
   flex-direction: column
+  background-color: blue
   gap: 70px
   .containers
+    background-color: purple
     display: flex
     flex-direction: row
     justify-content: space-between
@@ -15,22 +17,25 @@
       border-radius: 15px
 
     .mainContainer
+      background-color: red
       position: relative
-      width: max-content
-      height: max-content
+      width: 100%
+      height: 100%
       display: flex
       flex-direction: column
       align-items: center
       justify-content: center
       padding: 20px
       border-radius: 15px
-      width: 100%
       gap: 10px
       .tablesContainer
         display: flex
         flex-direction: row
         width: 100%
         justify-content: space-between
+        @media (width < 900px)
+          flex-direction: column
+
       .buttons
         width: max-content
         display: flex
