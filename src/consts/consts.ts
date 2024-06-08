@@ -1,6 +1,6 @@
 import {generateRandomIsRenounced} from '../app/func/functions';
 import {IsRenounced} from '../components/StatusTable/types/types';
-import {PlatformData} from '../components/Table/Table';
+import {PlatformData} from '../components/Table/table';
 
 export const jsondata: PlatformData[] = [
 	{

@@ -1,7 +1,7 @@
 
 import React, {useContext, useState} from 'react';
 import {IoClose} from 'react-icons/io5';
-import {SelectComponent} from '../Select/select';
+import {SelectComponent} from '../Select/Select';
 import style from './modal.module.sass';
 import {ModalContext} from './types/types';
 
