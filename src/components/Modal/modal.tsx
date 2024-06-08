@@ -5,12 +5,11 @@ import {SelectComponent} from '../Select/Select';
 import style from './modal.module.sass';
 import {ModalContext} from './types/types';
 
-export const Modal = () => {
+export const Modal = ({onClick}: { onClick: () => void }) => {
 	const [json, setJson] = useState<{adress: string; platform: string}>({
 		adress: '',
 		platform: '',
 	});
-	console.log(json);
 
 	const {open, handleClick} = useContext(ModalContext);
 	return (
@@ -19,7 +18,7 @@ export const Modal = () => {
 				open ? (
 					<div className={style.blur}>
 						<div className={style.content}>
-							<SelectComponent setJson={setJson} />
+							<SelectComponent setJson={setJson} onClick={onClick} data={{json}}/>
 							<IoClose onClick={handleClick} className={style.btn}/>
 						</div>
 					</div>

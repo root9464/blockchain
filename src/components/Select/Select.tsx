@@ -5,12 +5,13 @@ import {useCallback, useState} from 'react';
 import style from './select.module.sass';
 import {SelectComponentProps} from './types/types';
 
-export const SelectComponent = ({setJson}: SelectComponentProps) => {
+export const SelectComponent = ({setJson, onClick}: SelectComponentProps) => {
 	const [addressIndex, setAddressIndex] = useState<string>('');
 	const [platformIndex, setPlatformIndex] = useState<string>('');
 
 	const handleJsonUpdate = useCallback(() => {
 		setJson({adress: addressIndex, platform: platformIndex});
+		onClick();
 	}, [addressIndex, platformIndex]);
 
 	return (
