@@ -1,7 +1,8 @@
 FROM node:lts AS build
-WORKDIR /app
-COPY package*.json ./
-RUN yarn install
+WORKDIR /app 
+COPY package.json /app 
+COPY yarn.lock /app
+RUN yarn install 
 COPY . .
 RUN yarn build
 
