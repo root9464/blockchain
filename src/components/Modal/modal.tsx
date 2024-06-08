@@ -25,7 +25,7 @@ export const Modal = () => {
 					</div>
 				) : (
 					<>
-						<button onClick={handleClick} className={style.button}>Анализ передачи токенов</button>
+						<button onClick={handleClick} className={style.button}>Анализ смарт контракта</button>
 					</>
 				)
 			}
