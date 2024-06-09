@@ -11,10 +11,15 @@
     flex-direction: row
     justify-content: space-between
     padding: 50px
+    @media (width < 900px)
+      padding: 20px
+
     .sideContainer
-      width: max-content
       height: max-content
       border-radius: 15px
+      width: 100%
+      @media (width < 900px)
+        margin-top: 100px
 
     .mainContainer
       background-color: red
@@ -28,36 +33,85 @@
       padding: 20px
       border-radius: 15px
       gap: 10px
+      @media (width < 500px)
+        background-color: blue
+        padding: 0
+
       .tablesContainer
         display: flex
         flex-direction: row
         width: 100%
         justify-content: space-between
+        position: relative
+        background-color: aqua
+
+        .tables
+          display: flex
+          flex-direction: row
+          width: 100%
+          justify-content: space-between
+          padding-top: 100px
+          .table
+            width: 100%
+          @media (width < 1250px)
+            flex-direction: column
+
         @media (width < 900px)
           flex-direction: column
 
       .buttons
-        width: max-content
-        display: flex
+        width: 100%
+        background-color: blue
+
+        display: flex //flex
         flex-direction: row
         position: absolute
-        top: -31px
+        top: -20px
         gap: 10px
-        > button
-          all: unset
-          text-align: center
-          height: max-content
-          padding: 10px 20px
-          width: max-content
-          border-radius: 3px
-          font-size: 20px
-          border: 2px solid #ebebeb
-          background-color: #ffffff
-          color: #575757
-          &:nth-child(3n)
-            background-color: #176B87
-            color: #ffffff
-            border: 0
+        justify-content: space-between
+        align-items: center
+        .btns
+          display: flex
+          flex-direction: column
+          align-self: center
+          gap: 10px
+          > button
+            all: unset
+            text-align: center
+            height: max-content
+            padding: 10px 20px
+            width: max-content
+            border-radius: 3px
+            font-size: 20px
+            border: 2px solid #ebebeb
+            background-color: #ffffff
+            color: #575757
+            &:nth-child(2n)
+              background-color: #176B87
+              color: #ffffff
+              border: 3px solid #176B87
+
+      @media (width < 900px)
+        .buttons
+          position: absolute
+          top: -20px
+      @media (width < 700px)
+        .buttons
+          align-items: flex-start
+          .btns
+            align-self: flex-start
+            > button
+              padding: 5px 10px
+              font-size: 16px
+      @media (width < 500px)
+        .buttons
+          display: flex
+          flex-direction: column
+          .btns
+            > button
+              height: 20px
+              padding: 5px 10px
+              font-size: 14px
 
   .footerContainer
     background-color: #FFFFFF
@@ -78,13 +132,16 @@
       flex-direction: column
       align-items: center
     .progress
+      background-color: red
       display: inline-flex
       flex-direction: row
       flex-wrap: wrap
       align-content: center
       justify-content: space-evenly
-      align-items: stretch
-
+      align-items: flex-start
+      @media (width < 500px)
+        background-color: blue
+        width: 100%
       > div
         color: #858585
         text-align: center
@@ -92,3 +149,20 @@
         justify-content: center
         align-items: center
         flex-direction: column
+
+  @media (width < 900px)
+    .footerContainer
+      grid-template-columns: none
+      justify-content: center
+      align-items: center
+      padding: 5px 30px
+      margin-top: 50px
+  @media (width < 500px)
+    .footerContainer
+      grid-template-columns: none
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 5px 30px
+      margin-top: 50px

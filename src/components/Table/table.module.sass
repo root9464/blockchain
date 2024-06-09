@@ -7,9 +7,13 @@
   height: max-content
   color: #575757
   gap: 20px
+  @media (width < 700px)
+    grid-template-columns: none
+    grid-template-rows: repeat( auto-fit, 1fr )
+
   .card
     background-color: white
-    width: 90%
+    width: auto
     height: max-content
     border-radius: 15px
     padding: 20px

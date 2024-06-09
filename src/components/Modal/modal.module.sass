@@ -12,7 +12,9 @@
     background-color: #ffffff
     border: 2px solid #ebebeb
     color: #575757
-    font-size: 20px
+    font-size: clamp( 16px,1vw, 24px )
+    @media (width < 700px)
+      padding: 5px 10px
 
   .content
     position: fixed

@@ -17,27 +17,28 @@ export const App = () => {
 				<div className={style.mainContainer}>
 
 					<div className={style.tablesContainer}>
-						<div className={style.sideContainer}>
-							<h2>Название таблицы</h2>
-							<StatusTable items={open ? data : []}/>
+
+						<div className={style.buttons}>
+							<Provider>
+								<Modal onClick={() => setOpen(prev => !prev)}/>
+							</Provider>
+							{open ? (
+								<div className={style.btns}>
+									<button className={style.button}>Анализ передачи токенов</button>
+									<button className={style.button}>Проанализировать код</button>
+								</div>
+							) : (null)}
+
 						</div>
 
-						<div className={style.table}>
-							<div className={style.buttons}>
-								<Provider>
-									<Modal onClick={() => setOpen(prev => !prev)}/>
-								</Provider>
-								{open ? (
-									<>
-										<button className={style.button}>Анализ передачи токенов</button>
-										<button className={style.button}>Проанализировать код</button>
-									</>
-								) : (null)}
-
+						<div className={style.tables}>
+							<div className={style.sideContainer}>
+								<h2>Название таблицы</h2>
+								<StatusTable items={open ? data : []}/>
 							</div>
-							<h2>Аналитика ликвидности</h2>
 
-							<div>
+							<div className={style.table}>
+								<h2>Аналитика ликвидности</h2>
 								<Table json={open ? jsondata : []}/>
 								<div className={style.footerContainer}>
 									<div className={style.raiting}>
@@ -58,6 +59,7 @@ export const App = () => {
 							</div>
 							{/*  */}
 						</div>
+
 					</div>
 				</div>
 			</div>
