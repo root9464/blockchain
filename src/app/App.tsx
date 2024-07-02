@@ -20,7 +20,7 @@ export const App = () => {
 
 						<div className={style.buttons}>
 							<Provider>
-								<Modal onClick={() => setOpen(prev => !prev)}/>
+								<Modal onClick={() => setOpen(true)}/>
 							</Provider>
 							{open ? (
 								<div className={style.btns}>

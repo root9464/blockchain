@@ -1,17 +1,19 @@
 
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import {useCallback, useState} from 'react';
+import {useCallback, useContext, useState} from 'react';
+import {ModalContext} from '../Modal/types/types';
 import style from './select.module.sass';
 import {SelectComponentProps} from './types/types';
 
 export const SelectComponent = ({setJson, onClick}: SelectComponentProps) => {
 	const [addressIndex, setAddressIndex] = useState<string>('');
 	const [platformIndex, setPlatformIndex] = useState<string>('');
-
+	const {handleClick} = useContext(ModalContext);
 	const handleJsonUpdate = useCallback(() => {
 		setJson({adress: addressIndex, platform: platformIndex});
 		onClick();
+		handleClick();
 	}, [addressIndex, platformIndex]);
 
 	return (

@@ -1,6 +1,5 @@
 
 import React, {useContext, useState} from 'react';
-import {IoClose} from 'react-icons/io5';
 import {SelectComponent} from '../Select/Select';
 import style from './modal.module.sass';
 import {ModalContext} from './types/types';
@@ -19,7 +18,6 @@ export const Modal = ({onClick}: { onClick: () => void }) => {
 					<div className={style.blur}>
 						<div className={style.content}>
 							<SelectComponent setJson={setJson} onClick={onClick} data={{json}}/>
-							<IoClose onClick={handleClick} className={style.btn}/>
 						</div>
 					</div>
 				) : (
