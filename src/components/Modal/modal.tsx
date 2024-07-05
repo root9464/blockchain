@@ -1,6 +1,6 @@
 
 import React, {useContext, useState} from 'react';
-import {SelectComponent} from '../Select/Select';
+import {SelectComponent} from './Select/Select';
 import style from './modal.module.sass';
 import {ModalContext} from './types/types';
 

@@ -1,0 +1,33 @@
+.header
+  max-width: 100%
+  background-color: #FFFFFF
+  height: 100px
+  border-radius: 0px 0px 15px 15px
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 0px 20px 0px 0px
+  justify-content: space-between
+  .brand
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 20px
+    font-size: clamp( 12px,1vw, 20px )
+
+    .video
+      -webkit-filter: brightness(108.5%)
+      width: 100px
+      height: 100%
+      object-position: 0 0
+      object-fit: fill
+      border-radius: 0px 15px 15px 15px
+
+  @media (width < 600px)
+    align-items: center
+    display: grid
+    grid-template-columns: 1fr
+    padding: 10px
+    justify-items: center
+    .brand
+      display: none

@@ -1,3 +1,5 @@
+@import ../../../app/global
+
 .container
   display: flex
   flex-direction: column
@@ -10,20 +12,22 @@
   background-color: #FFFFFF
   padding: 20px 20px
   border-radius: 15px
-  border: 2px solid #ebebeb
-
-  color: #575757
+  color: $text-color-in-white-elements
   z-index: 0
+
   > h2
     font-size: 24px
   .select
+    all: unset
     height: 50px
-    width: 100%
-    background-color: #ffffff
+    width: calc( 100% - 20px )
+    background-color: #ebebeb
     border-radius: 3px
-    border: 2px solid #ebebeb
-    color: #575757
-
+    color: $text-color-in-white-elements
+    font-size: 16px
+    display: flex
+    align-items: center
+    padding: 0px 10px
     &:focus
       outline: none
 
@@ -35,19 +39,9 @@
     font-size: 14px
     padding: 0px 10px
     border-radius: 3px
-    border: 2px solid #ebebeb
-    color: #575757
-    background-color: #ffffff
+    background-color: #ebebeb
     &::placeholder
       color: #575757
 
   .button
-    all: unset
-    margin: 0
-    padding: 0px 10px
-    height: 51px
-    width: max-content
-    border-radius: 3px
-    background-color: #176B87
-    font-size: 16px
-    color: #ffffff
+    @include ButtonStyles

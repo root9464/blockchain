@@ -1,6 +1,9 @@
+/* eslint-disable camelcase */
 import {generateRandomIsRenounced} from '../app/func/functions';
-import {IsRenounced} from '../components/StatusTable/types/types';
-import {PlatformData} from '../components/Table/table';
+import {IsRenounced} from '../components/Tables/StatusTable/types/types';
+import {PropsInTableAiAnalyze} from '../components/Tables/TableAiAnalyze/types/types';
+import {PropsInTableCodeAnalyze} from '../components/Tables/TableCodeAnalyze/types/types';
+import {PlatformData} from '../components/Tables/TableLiquidityPool/TableLiquidityPool';
 
 export const jsondata: PlatformData[] = [
 	{
@@ -15,7 +18,7 @@ export const jsondata: PlatformData[] = [
 		},
 	},
 	{
-		name: 'pancakeswapv2',
+		name: 'pancakeswapv3',
 		money: {
 			first: 'bnb',
 			second: 'bsc-usdt',
@@ -26,7 +29,7 @@ export const jsondata: PlatformData[] = [
 		},
 	},
 	{
-		name: 'pancakeswapv2',
+		name: 'pancakeswapv4',
 		money: {
 			first: 'bnb',
 			second: 'bsc-usdt',
@@ -40,13 +43,55 @@ export const jsondata: PlatformData[] = [
 
 export const data: IsRenounced[] = Array.from({length: 8}, generateRandomIsRenounced);
 
-/*
-	Const [json, setJson] = useState<{adress: string; platform: string}>({
-		adress: '',
-		platform: '',
-	});
+export const Table3: PropsInTableCodeAnalyze[] = [
+	{
+		has_error: true,
+		enriched_erros_data_output: [
+			{
+				url: 'https://example.com/error1',
+				name: 'Error 1',
+				cases: 5,
+				severity: 'High',
+				confidence: 'Medium',
+			},
+			{
+				url: 'https://example.com/error2',
+				name: 'Error 2',
+				cases: 2,
+				severity: 'Medium',
+				confidence: 'High',
+			},
+			{
+				url: 'https://example.com/error3',
+				name: 'Error 3',
+				cases: 10,
+				severity: 'Low',
+				confidence: 'Medium',
+			},
+		],
+	},
+];
 
-	useEffect(() => {
-		console.log(json);
-	}, [json]);
-*/
+export const Table4: PropsInTableAiAnalyze[] = [
+	{
+		is_fraud: false,
+		ai_data: 0.42076458163306557,
+	},
+	{
+		is_fraud: false,
+		ai_data: 0.42076458163306557,
+	},
+	{
+		is_fraud: false,
+		ai_data: 0.42076458163306557,
+	},
+	{
+		is_fraud: false,
+		ai_data: 0.42076458163306557,
+	},
+	{
+		is_fraud: false,
+		ai_data: 0.42076458163306557,
+	},
+
+];

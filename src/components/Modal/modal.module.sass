@@ -1,3 +1,4 @@
+@import ../../app/global
 
 .container
   max-width: 500px
@@ -5,16 +6,17 @@
   .button
     all: unset
     text-align: center
-    height: max-content
+    height: 30px
     padding: 10px 20px
     width: max-content
-    border-radius: 3px
-    background-color: #ffffff
-    border: 2px solid #ebebeb
-    color: #575757
+    border-radius: 10px
+    background-color: $text-color-in-white-elements
+    color: #ffff
+    font-weight: 600
     font-size: clamp( 16px,1vw, 24px )
-    @media (width < 700px)
-      padding: 5px 10px
+    transition: background-color 0.3s
+    &:hover
+      background-color: #424242
 
   .content
     position: fixed
@@ -28,22 +30,3 @@
     right: 0
     z-index: 10
     background-color: rgba(0, 0, 0, 0.5)
-
-    > button
-      position: absolute
-      top: 0
-      right: 80%
-
-.btn
-  all: unset
-  text-align: center
-  height: max-content
-  width: max-content
-  position: relative
-  right: 45px
-  bottom: 130px
-  border-radius: 3px
-  background-color: #ffffff
-  border: 1px solid #ebebeb
-  color: #575757
-  font-size: 20px

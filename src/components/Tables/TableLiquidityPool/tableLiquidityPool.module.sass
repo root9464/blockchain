@@ -1,0 +1,42 @@
+@import ../../../app/global
+.table
+  width: 100%
+  height: max-content
+  background-color: white
+  border-radius: 15px
+  display: flex
+  flex-direction: column
+
+  .tableHeader
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 40px
+    padding: 10px 20px
+    border-bottom: 2px solid #ebebeb
+    font-size: clamp( 12px,1vw, 20px )
+
+  .tableBody
+    width: 100%
+    height: max-content
+    display: flex
+    flex-direction: column
+    font-size: clamp( 14px,1vw, 20px )
+    .tableItem
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      height: auto
+      padding: 10px 20px
+      border-bottom: 2px solid #ebebeb
+      >div
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 10px 0px
+        gap: 10px
+      &:last-child
+        border-bottom: 0

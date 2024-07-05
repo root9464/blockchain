@@ -1,0 +1,115 @@
+.footer
+  width: calc( 100% - 40px - 30%)
+  height: max-content
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 20px
+  padding: 20px
+  background-color: #ffff
+  margin: 0 auto
+  border-radius: 15px
+  .marketRating
+    justify-self: self-start
+    display: flex
+    flex-direction: column
+    gap: 5px
+    width: 320px
+    background-color: #ebebeb
+    border-radius: 15px
+    padding: 10px 20px
+
+  .progressItems
+    justify-self: self-end
+    display: flex
+    flex-direction: row
+    width: calc( 100% - 40px )
+    gap: 20px
+    background-color: #ebebeb
+    padding: 10px 20px
+    border-radius: 15px
+    align-items: center
+    text-align: center
+
+  .underFooter
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    gap: 15px
+    width: calc( 100% - 40px )
+    background-color: #ebebeb
+    border-radius: 15px
+    padding: 10px 20px
+    grid-column: 1 / -1
+    flex-wrap: wrap
+    > div
+      display: flex
+      flex-direction: row
+      gap: 15px
+      align-items: center
+      > svg
+        height: 50px
+        width: 50px
+
+  @media (width < 1250px)
+    grid-template-columns: 1fr
+    .marketRating
+      grid-column: 1 / -1
+      width: max-content
+      justify-self: unset
+
+    .progressItems
+      grid-column: 1 / -1
+      justify-self: unset
+      justify-content: space-around
+      width: max-content
+      margin-right: 0
+
+  @media (width < 700px)
+    display: grid
+    grid-template-columns: 1fr
+    gap: 20px
+    padding: 10px
+    width: auto
+
+    .marketRating
+      width: calc( 100% - 40px )
+      justify-self: unset
+
+    .progressItems
+      width: calc( 100% - 40px )
+      justify-self: unset
+
+    .underFooter
+      display: flex
+      flex-direction: row
+      gap: 15px
+      width: max-content
+      > div
+        display: flex
+        flex-direction: column
+        gap: 15px
+        align-items: center
+        > svg
+          height: 50px
+          width: 50px
+
+  @media (width < 600px)
+    width: 100%
+    padding: 0
+    margin-top: 50px
+    $width: 100vw
+    .marketRating
+      width: $width
+      justify-self: unset
+      padding: 0
+    .progressItems
+      width: $width
+      justify-self: unset
+      flex-direction: column
+      padding: 0
+
+    .underFooter
+      width: $width
+      justify-self: unset
+      padding: 0

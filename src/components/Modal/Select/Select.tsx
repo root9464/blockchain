@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import {useCallback, useContext, useState} from 'react';
-import {ModalContext} from '../Modal/types/types';
+import {ModalContext} from '../types/types';
 import style from './select.module.sass';
 import {SelectComponentProps} from './types/types';
 

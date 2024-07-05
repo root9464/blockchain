@@ -1,4 +1,4 @@
-import {IsRenounced, StatusEnum} from '../../components/StatusTable/types/types';
+import {IsRenounced, StatusEnum} from '../../components/Tables/StatusTable/types/types';
 
 export function generateRandomString(lang: 'en' | 'ru'): string {
 	const letters = 'abcdefghijklmnopqrstuvwxyz';
