@@ -12,26 +12,26 @@ import GrayDash from '../../../../assets/img/GDash.svg';
 import GreenDash from '../../../../assets/img/GrDash.svg';
 import RedDash from '../../../../assets/img/RDash.svg';
 import YellowDash from '../../../../assets/img/YDash.svg';
-import {StatusEnum} from '../types/types';
+import {ImageMap, StatusEnum, ValueType} from '../types/types';
 
-export const getStatusText = ({status, value}: { status: StatusEnum, value: boolean | 'none' | number }) => {
-	const images = {
-		[StatusEnum.Gray]: {
+export const getStatusText = ({status, value}: { status: StatusEnum, value: ValueType }) => {
+	const imageMap: ImageMap = {
+		gray: {
 			none: GrayDash,
 			true: GrayCheck,
 			false: GrayCross,
 		},
-		[StatusEnum.Red]: {
+		red: {
 			none: RedDash,
 			true: RedCheck,
 			false: RedCross,
 		},
-		[StatusEnum.Green]: {
+		green: {
 			none: GreenDash,
 			true: GrennCheck,
 			false: GreenCross,
 		},
-		[StatusEnum.Unknown]: {
+		unknown: {
 			none: YellowDash,
 			true: YellowCheck,
 			false: YellowCross,
@@ -40,7 +40,7 @@ export const getStatusText = ({status, value}: { status: StatusEnum, value: bool
 
 	return (
 		<img
-			src={(images[status] as { [key: string]: string })[value === 'none' ? 'none' : value.toString()]}
+			src={imageMap[status][value === 'none' ? 'none' : value.toString()]}
 			alt=''
 		/>
 	);

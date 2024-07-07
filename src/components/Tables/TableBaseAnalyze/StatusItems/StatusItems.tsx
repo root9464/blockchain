@@ -1,7 +1,7 @@
 import {getStatusText} from '../func/functions';
-import {IsRenounced} from '../types/types';
+import {PropsInTableBaseAnalyze} from '../types/types';
 import style from './item.module.sass';
-export const StatusItem = ({item}: {item: IsRenounced}) => (
+export const StatusItem = ({item}: {item: PropsInTableBaseAnalyze}) => (
 	<div className={style.ctp} key={item.name.ru}>
 		{item.value !== null && (
 			<>
@@ -9,7 +9,7 @@ export const StatusItem = ({item}: {item: IsRenounced}) => (
 					<h2>{item.name.ru}</h2>
 					<p>{item.description.text.en ?? item.description.text.ru}</p>
 				</div>
-				<p>{getStatusText({status: item.status, value: item.value}) ?? item.value}</p>
+				{getStatusText({status: item.status, value: item.value}) ?? item.value}
 			</>
 		)}
 	</div>

@@ -6,6 +6,7 @@ export const Header = () => {
 	// Показ элементов
 	const [stateIsOpenModal, setStateIsOpenModal] = useState(false);
 	const visibleAllElements = () => setStateIsOpenModal(true);
+	console.log(stateIsOpenModal);
 
 	return (
 		<div className={style.header}>

@@ -1,11 +1,11 @@
 /* eslint-disable camelcase */
-import {generateRandomIsRenounced} from '../app/func/functions';
-import {IsRenounced} from '../components/Tables/StatusTable/types/types';
+import {generateRandomPropsTableBaseAnalyze} from '../app/func/functions';
 import {PropsInTableAiAnalyze} from '../components/Tables/TableAiAnalyze/types/types';
+import {PropsInTableBaseAnalyze} from '../components/Tables/TableBaseAnalyze/types/types';
 import {PropsInTableCodeAnalyze} from '../components/Tables/TableCodeAnalyze/types/types';
-import {PlatformData} from '../components/Tables/TableLiquidityPool/TableLiquidityPool';
+import {PlatformData} from '../components/Tables/TableLiquidityPool/types/types';
 
-export const jsondata: PlatformData[] = [
+export const Table1: PlatformData[] = [
 	{
 		name: 'pancakeswapv2',
 		money: {
@@ -41,7 +41,7 @@ export const jsondata: PlatformData[] = [
 	},
 ];
 
-export const data: IsRenounced[] = Array.from({length: 8}, generateRandomIsRenounced);
+export const Table2: PropsInTableBaseAnalyze[] = Array.from({length: 8}, generateRandomPropsTableBaseAnalyze);
 
 export const Table3: PropsInTableCodeAnalyze[] = [
 	{

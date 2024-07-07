@@ -1,16 +1,6 @@
 
 import style from './tableLiquidityPool.module.sass';
-export type PlatformData = {
-  name: string;
-  money: {
-    first: string;
-    second: string;
-  };
-  amount: {
-    first: string;
-    second: string;
-  };
-};
+import {PlatformData} from './types/types';
 
 export const TableLiquidityPool = ({json}: {json: PlatformData[]}) => (
 	<div className={style.table}>
@@ -38,3 +28,4 @@ export const TableLiquidityPool = ({json}: {json: PlatformData[]}) => (
 		</div>
 	</div>
 );
+

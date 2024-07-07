@@ -1,6 +1,6 @@
-import {data, jsondata, Table3, Table4} from '../../consts/consts';
-import {StatusTable} from './StatusTable/statusTable';
+import {Table1, Table2, Table3, Table4} from '../../consts/consts';
 import {TableAiAnalyze} from './TableAiAnalyze/TableAiAnalyze';
+import {TableBaseAnalyze} from './TableBaseAnalyze/TableBaseAnalyze';
 import {TableCodeAnalyze} from './TableCodeAnalyze/TableCodeAnalyze';
 import {TableLiquidityPool} from './TableLiquidityPool/TableLiquidityPool';
 import style from './tables.module.sass';
@@ -8,7 +8,7 @@ export const Tables = () => (
 	<div className={style.blockTables}>
 		<div>
 			<h2>Базовый анализ</h2>
-			<StatusTable json={data}/>
+			<TableBaseAnalyze json={Table2}/>
 		</div>
 
 		<div>
@@ -19,7 +19,7 @@ export const Tables = () => (
 		<div>
 			<div>
 				<h2>Таблица анализа ликвидности</h2>
-				<TableLiquidityPool json={jsondata} />
+				<TableLiquidityPool json={Table1} />
 			</div>
 
 			<div>

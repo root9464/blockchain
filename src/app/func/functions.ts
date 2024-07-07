@@ -1,4 +1,4 @@
-import {IsRenounced, StatusEnum} from '../../components/Tables/StatusTable/types/types';
+import {PropsInTableBaseAnalyze, StatusEnum} from '../../components/Tables/TableBaseAnalyze/types/types';
 
 export function generateRandomString(lang: 'en' | 'ru'): string {
 	const letters = 'abcdefghijklmnopqrstuvwxyz';
@@ -10,16 +10,18 @@ export function generateRandomString(lang: 'en' | 'ru'): string {
 	return lang === 'en' ? `Random string ${randomString}` : `Случайная строка ${randomString}`;
 }
 
-export function generateRandomIsRenounced(): IsRenounced {
-	const randomStatus = Math.random() < 0.25
-		? StatusEnum.Gray
-		: Math.random() < 0.5
-			? StatusEnum.Green
-			: Math.random() < 0.75
-				? StatusEnum.Red
-				: StatusEnum.Unknown;
+type RandomValue = boolean | 'none';
 
-	const randomValue = Math.random() < 0.5
+export function generateRandomPropsTableBaseAnalyze(): PropsInTableBaseAnalyze {
+	const randomStatus: StatusEnum = Math.random() < 0.25
+		? 'gray'
+		: Math.random() < 0.5
+			? 'green'
+			: Math.random() < 0.75
+				? 'red'
+				: 'unknown';
+
+	const randomValue: RandomValue = Math.random() < 0.5
 		? true
 		: 'none';
 
@@ -38,3 +40,4 @@ export function generateRandomIsRenounced(): IsRenounced {
 		},
 	};
 }
+
